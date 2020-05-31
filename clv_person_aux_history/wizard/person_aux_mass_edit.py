@@ -4,7 +4,7 @@
 
 import logging
 
-from odoo import api, fields, models
+from odoo import fields, models
 
 _logger = logging.getLogger(__name__)
 
@@ -22,7 +22,7 @@ class PersonAuxMassEdit(models.TransientModel):
          ], string='Phase:', default=False, readonly=False, required=False
     )
 
-    @api.multi
+    # @api.multi
     def do_person_aux_mass_edit(self):
         self.ensure_one()
 
