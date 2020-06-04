@@ -64,7 +64,8 @@
         <field name="model">hr.employee.history</field>
         <field name="priority" eval="8"/>
         <field name="arch" type="xml">
-            <tree colors="red:date_sign_out != False;blue:date_sign_out == False">
+            <!--tree colors="red:date_sign_out != False;blue:date_sign_out == False"-->
+            <tree>
                 <field name="employee_id"/>
                 <field name="department_id"/>
                 <field name="job_id"/>

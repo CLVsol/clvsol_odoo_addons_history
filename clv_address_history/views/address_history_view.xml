@@ -59,7 +59,8 @@
         <field name="model">clv.address.history</field>
         <field name="priority" eval="8"/>
         <field name="arch" type="xml">
-            <tree colors="red:date_sign_out != False;blue:date_sign_out == False">
+            <!--tree colors="red:date_sign_out != False;blue:date_sign_out == False"-->
+            <tree>
                 <field name="date_sign_in"/>
                 <field name="date_sign_out"/>
             </tree>
