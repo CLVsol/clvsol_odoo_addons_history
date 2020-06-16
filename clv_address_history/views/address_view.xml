@@ -65,7 +65,7 @@
             <field name="date_sign_out" position="after">
                 <field name="address_id"/>
                 <field name="category_names"/>
-                <field name="category_names_suport" invisible="True"/>
+                <!--field name="category_names_suport" invisible="True"/-->
                 <field name="marker_names"/>
                 <field name="tag_names"/>
             </field>
