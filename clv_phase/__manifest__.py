@@ -20,6 +20,7 @@
         'views/phase_view.xml',
         'views/phase_log_view.xml',
         'views/global_settings_view.xml',
+        'data/global_log_client.xml',
     ],
     'demo': [],
     'test': [],
