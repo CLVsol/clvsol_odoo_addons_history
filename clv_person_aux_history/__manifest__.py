@@ -15,6 +15,7 @@
         'clv_phase',
     ],
     'data': [
+        'data/default_value.xml',
         'views/phase_view.xml',
         'wizard/person_aux_mass_edit_view.xml',
     ],
