@@ -4,7 +4,7 @@
 
 import logging
 
-from odoo import fields, models
+from odoo import api, fields, models
 
 _logger = logging.getLogger(__name__)
 
@@ -19,10 +19,31 @@ class FamilyMassEdit(models.TransientModel):
     phase_id_selection = fields.Selection(
         [('set', 'Set'),
          ('remove', 'Remove'),
-         ], string='Phase:', default=False, readonly=False, required=False
+         ], string='Phase:', readonly=False, required=False
     )
 
-    # @api.multi
+    @api.model
+    def default_get(self, field_names):
+
+        defaults = super().default_get(field_names)
+
+        param_value = self.env['ir.config_parameter'].sudo().get_param(
+            'clv.global_settings.current_phase_id', '').strip()
+        phase_id = False
+        if param_value:
+            phase_id = int(param_value)
+
+        phase_id_selection = self.env['clv.default_value'].search([
+            ('model', '=', 'clv.family'),
+            ('parameter', '=', 'mass_edit_phase_id_selection'),
+            ('enabled', '=', True),
+        ]).value
+
+        defaults['phase_id'] = phase_id
+        defaults['phase_id_selection'] = phase_id_selection
+
+        return defaults
+
     def do_family_mass_edit(self):
         self.ensure_one()
 
