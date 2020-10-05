@@ -12,7 +12,6 @@
     'website': 'https://github.com/CLVsol',
     'depends': [
         'clv_address',
-        'clv_phase',
     ],
     'data': [
         'security/ir.model.access.csv',
