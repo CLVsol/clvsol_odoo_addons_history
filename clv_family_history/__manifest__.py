@@ -16,12 +16,10 @@
     ],
     'data': [
         'security/ir.model.access.csv',
-        'data/default_value.xml',
         'views/family_history_view.xml',
         'views/phase_view.xml',
         'views/family_view.xml',
         'views/address_view.xml',
-        'wizard/family_mass_edit_view.xml',
     ],
     'demo': [],
     'test': [],
