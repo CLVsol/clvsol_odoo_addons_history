@@ -21,7 +21,6 @@
         'views/person_view.xml',
         'views/address_view.xml',
         'views/family_view.xml',
-        'wizard/person_mass_edit_view.xml',
     ],
     'demo': [],
     'test': [],
